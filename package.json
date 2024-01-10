@@ -1,0 +1,23 @@
+{
+  "name": "professional_readme_generator",
+  "version": "1.0.0",
+  "description": "a command line application to help create a professional readme for repos",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatalieYaspo/Professional_README_Generator.git"
+  },
+  "keywords": [
+    "readme",
+    "generator"
+  ],
+  "author": "Natalie Yaspo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NatalieYaspo/Professional_README_Generator/issues"
+  },
+  "homepage": "https://github.com/NatalieYaspo/Professional_README_Generator#readme"
+}
