@@ -66,9 +66,46 @@ inquirer
     ])
 
     .then((response) => {
-        const questionsEmail = response.questionsEmail
-        console.log(questionsEmail);
-        fs.writeFile('README2.md', JSON.stringify(response, null, '\t'), (err) =>
+        const title = response.projectTitle
+        const description = response.description
+        const installation = response.installation
+        const usage = response.usage
+        const license = response.license
+        const contributing = response.contributing
+        const tests = response.tests
+        const qGitHub = response.questionsGitHub
+        const qEmail = response.questionsEmail
+
+        const readMeTemplate = `# ${title} 
+
+        ## Description
+        ${description}
+
+        ## Table of Contents
+                
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [License](#license)
+
+        ## Installation
+        ${installation}
+
+        ## Usage
+        ${usage}
+
+        ## License
+        ${license} 
+    
+        ## Contribution
+        ${contributing}
+
+        ## Tests
+        ${tests}
+
+        ## Questions or comments, please contact:
+        GitHub: ${qGitHub}
+        Email: ${qEmail}`;
+        fs.writeFile('README2.md', JSON.stringify(readMeTemplate, null, '\n'), (err) =>
             err ? console.log(err) : console.log('Success!')
         );
     }
