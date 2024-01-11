@@ -13,7 +13,6 @@ inquirer
         message: 'What is your project title?',
         name: 'projectTitle',
     },
-    
     {
       type: 'input',
       message: 'What does this project do?',
@@ -35,7 +34,7 @@ inquirer
         name: 'credits',
     },
     {
-        type: 'checkbox',
+        type: 'list',
         message: 'Does this app have a license?',
         choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'BSD 2-Clause License', 
         'BSD 3-Clause License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal',
@@ -66,7 +65,7 @@ inquirer
     ])
 
     .then((response) => {
-        console.log('Is license appearing?' response.license)
+        // console.log('Is license appearing?' response.license)
         const title = response.projectTitle
         const description = response.description
         const installation = response.installation
@@ -78,39 +77,53 @@ inquirer
         const qGitHub = response.questionsGitHub
         const qEmail = response.questionsEmail
 
-        const readMeTemplate = `# ${title} 
+        const readMeTemplate = `# ${title}
 
         ## Description
+        
         ${description}
-
+        
         ## Table of Contents
-                
+        
         - [Installation](#installation)
         - [Usage](#usage)
         - [Credits](#credits)
         - [License](#license)
-
+        - [Contribution](#contribution)
+        - [Tests](#tests)
+        - [Questions](#questions)
+        
         ## Installation
+        
         ${installation}
-
+        
         ## Usage
+        
         ${usage}
-
+        
         ## Credits
-        ${credits}
-
+        
+        Developer: ${credits}
+        
         ## License
-        ${license} 
-    
+        
+        ${license}
+        
+        
+        
         ## Contribution
+        
         ${contributing}
-
+        
         ## Tests
-        ${tests}
 
-        ## Questions or comments, please contact:
+        ${tests}
+        
+        ## Questions
+        
+        For Questions or comments, please contact:
         - GitHub: [${qGitHub}](https://github.com/${qGitHub})
-        - Email: [${qEmail}](mailto:${qEmail})`; //NEED this to be a link...Same with Table of Contents
+        - Email: [${qEmail}](${qEmail})`;
 
         //Run function to write the file
         writeToFile(title, readMeTemplate);
@@ -119,7 +132,9 @@ inquirer
 
 // TODO: Create a function to write README file
 function writeToFile(title, data) {
-    fs.writeFile(`./${title.toLowerCase().split(' ').join('')}README.md`, data, (err) =>
+    // fs.writeFile(`./appOutput/${title.toLowerCase().split(' ').join('')}README.md`, data, (err) =>
+    // err ? console.log(err) : console.log('Your README has been created!')
+    fs.writeFile(`./appOutput/README.md`, data, (err) =>
     err ? console.log(err) : console.log('Your README has been created!')
 );
 }
