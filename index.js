@@ -20,11 +20,6 @@ inquirer
       name: 'description',
     },
     {
-        type: 'input',
-        message: 'What does this project do?', //need something else here
-        name: 'tableOfContents',
-    },
-    {
       type: 'input',
       message: 'How would someone install this app?',
       name: 'installation',
@@ -33,6 +28,11 @@ inquirer
         type: 'input',
         message: 'How does a person use this app?',
         name: 'usage',
+    },
+    {
+        type: 'input',
+        message: 'Who should receive credits for this app?',
+        name: 'credits',
     },
     {
         type: 'checkbox',
@@ -50,7 +50,7 @@ inquirer
     },
     {
         type: 'input',
-        message: 'How could someone test this app?', //Need a different Q here
+        message: 'Are there tests that have been run on this?', //Need a different Q here
         name: 'tests',
     },
     {
@@ -66,10 +66,12 @@ inquirer
     ])
 
     .then((response) => {
+        console.log('Is license appearing?' response.license)
         const title = response.projectTitle
         const description = response.description
         const installation = response.installation
         const usage = response.usage
+        const credits = response.credits
         const license = response.license
         const contributing = response.contributing
         const tests = response.tests
@@ -85,6 +87,7 @@ inquirer
                 
         - [Installation](#installation)
         - [Usage](#usage)
+        - [Credits](#credits)
         - [License](#license)
 
         ## Installation
@@ -92,6 +95,9 @@ inquirer
 
         ## Usage
         ${usage}
+
+        ## Credits
+        ${credits}
 
         ## License
         ${license} 
@@ -103,16 +109,20 @@ inquirer
         ${tests}
 
         ## Questions or comments, please contact:
-        GitHub: ${qGitHub}
-        Email: ${qEmail}`;
-        fs.writeFile('README2.md', JSON.stringify(readMeTemplate, null, '\n'), (err) =>
-            err ? console.log(err) : console.log('Success!')
-        );
+        - GitHub: [${qGitHub}](https://github.com/${qGitHub})
+        - Email: [${qEmail}](mailto:${qEmail})`; //NEED this to be a link...Same with Table of Contents
+
+        //Run function to write the file
+        writeToFile(title, readMeTemplate);
     }
     );
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(title, data) {
+    fs.writeFile(`./${title.toLowerCase().split(' ').join('')}README.md`, data, (err) =>
+    err ? console.log(err) : console.log('Your README has been created!')
+);
+}
 
 // TODO: Create a function to initialize app
 function init() {}
