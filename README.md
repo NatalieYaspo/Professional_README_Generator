@@ -34,7 +34,7 @@ Starter Code: https://git.bootcampcontent.com/UNC-Charlotte/UNCC-VIRT-FSF-FT-12-
 
 Collaborators:
 
-Tutorials: 
+Tutorials: Perez, Javier via YouTube ("How to make a README generator using node.js inquirer")
 
 ## License
 
