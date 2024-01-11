@@ -40,7 +40,7 @@ inquirer
         'BSD 3-Clause License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal',
          'Eclipse Public License 2.0', 'GNU AGPL v3', 'GNU GPL v2',
           'GNU LGPL v3', 'Mozilla Public License 2.0', 'The Unlicense', 'N/A'], //ADD other licenses here
-        name: 'liscense',
+        name: 'license',
     },
     {
         type: 'input',
@@ -64,21 +64,9 @@ inquirer
     },
     ])
 
-    .then((response) => {
-        // console.log('Is license appearing?' response.license)
-        const title = response.projectTitle
-        const description = response.description
-        const installation = response.installation
-        const usage = response.usage
-        const credits = response.credits
-        const license = response.license
-        const contributing = response.contributing
-        const tests = response.tests
-        const qGitHub = response.questionsGitHub
-        const qEmail = response.questionsEmail
-
-        const readMeTemplate = `# ${title}
-
+    .then(({projectTitle, description, installation, usage, credits, license, contributing, tests, questionsGitHub, questionsEmail}) => {
+        const readMeTemplate = `# ${projectTitle}
+        
         ## Description
         
         ${description}
@@ -122,16 +110,16 @@ inquirer
         ## Questions
         
         For Questions or comments, please contact:
-        - GitHub: [${qGitHub}](https://github.com/${qGitHub})
-        - Email: [${qEmail}](${qEmail})`;
+        - GitHub: [${questionsGitHub}](https://github.com/${questionsGitHub})
+        - Email: [${questionsEmail}](mailto:${questionsEmail})`;
 
         //Run function to write the file
-        writeToFile(title, readMeTemplate);
+        writeToFile(projectTitle, readMeTemplate);
     }
     );
 
 // TODO: Create a function to write README file
-function writeToFile(title, data) {
+function writeToFile(projectTitle, data) {
     // fs.writeFile(`./appOutput/${title.toLowerCase().split(' ').join('')}README.md`, data, (err) =>
     // err ? console.log(err) : console.log('Your README has been created!')
     fs.writeFile(`./appOutput/README.md`, data, (err) =>
