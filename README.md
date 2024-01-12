@@ -15,7 +15,7 @@ In the Questions section, entering the user's GitHub username will create a link
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage][#usage]
+- [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 - [Tests](#tests)
