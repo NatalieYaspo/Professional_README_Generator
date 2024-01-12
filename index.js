@@ -4,8 +4,6 @@ const inquirer = require('inquirer');
 // const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = [];  //REMOVE?
-
 inquirer
   .prompt([
     {
@@ -67,51 +65,51 @@ inquirer
     .then(({projectTitle, description, installation, usage, credits, license, contributing, tests, questionsGitHub, questionsEmail}) => {
         const readMeTemplate = `# ${projectTitle}
         
-        ## Description
-        
-        ${description}
-        
-        ## Table of Contents
-        
-        - [Installation](#installation)
-        - [Usage](#usage)
-        - [Credits](#credits)
-        - [License](#license)
-        - [Contribution](#contribution)
-        - [Tests](#tests)
-        - [Questions](#questions)
-        
-        ## Installation
-        
-        ${installation}
-        
-        ## Usage
-        
-        ${usage}
-        
-        ## Credits
-        
-        Developer: ${credits}
-        
-        ## License
-        
-        ${license}
-        
-        
-        
-        ## Contribution
-        
-        ${contributing}
-        
-        ## Tests
+## Description
+    
+${description}
 
-        ${tests}
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+
+${installation}
+
+## Usage
+
+${usage}
+
+## Credits
+
+Developer: ${credits}
         
-        ## Questions
-        
-        For Questions or comments, please contact:
-        - GitHub: [${questionsGitHub}](https://github.com/${questionsGitHub})
-        - Email: [${questionsEmail}](mailto:${questionsEmail})`;
+## License
+
+${license}
+
+
+
+## Contribution
+
+${contributing}
+
+## Tests
+
+${tests}
+
+## Questions
+
+For Questions or comments, please contact:
+- GitHub: [${questionsGitHub}](https://github.com/${questionsGitHub})
+- Email: [${questionsEmail}](mailto:${questionsEmail})`;
 
         //Run function to write the file
         writeToFile(projectTitle, readMeTemplate);
