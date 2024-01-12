@@ -23,24 +23,35 @@ In the Questions section, entering the user's GitHub username will create a link
 ## Installation
 
 Users will need to open the index.js file in VS Code.
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/20348d88-fb48-4c89-bd6e-728dbcc86cbb)
+
 Then they will need ensure that all of the dependencies are installed.
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/ecba2ec0-ecbb-4e4c-80c8-9253caa56cab)
 
 To install dependencies:
 - Open the terminal in VS Code:
-
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/81229b55-723e-4b0a-8d38-6a4f068c206e)
 
 - Enter "npm install"
-
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/60aa1e6f-71b0-41f6-b049-d172aabed923)
 
 - The package-lock.json should appear in your folder:
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/d04f5003-c973-4b48-acfa-336e42eeaf31)
 
 ## Usage
 
 With the index.js file open in VS Code, run "node index.js" in the terminal:
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/144a5f3b-f2b9-4856-8627-a09665159d4c)
 
+Follow the question prompts in the terminal to fill out a detailed README.md file. Hit enter after each entry.Aw
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/b5f226d3-b056-4943-84b8-008056d25da0)
 
-Follow the question prompts in the terminal to fill out a detailed README.md file.
+A README.md will be created with the uder's input in the appOutput folder, and the console will log: 
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/3078a071-d7b9-457d-a922-5ddee028003f)
 
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/4e7535e7-8874-40d8-b485-f3705cab10cb)
+
+![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/58392ad8-f553-49a9-aa3e-166d88a16c58)
 
 Link to video tutorial: 
 
