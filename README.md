@@ -53,7 +53,7 @@ A README.md will be created with the uder's input in the appOutput folder, and t
 
 ![image](https://github.com/NatalieYaspo/Professional_README_Generator/assets/149972640/58392ad8-f553-49a9-aa3e-166d88a16c58)
 
-Link to video tutorial: 
+Link to video tutorial: https://drive.google.com/file/d/1Pgy97l5wF6JCxidBwNHaKjw6ra3DURQr/view
 
 ## Credits
 
