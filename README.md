@@ -2,12 +2,15 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This project will help the user create a professional README file based on their answers to propmts in the terminal.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+When all questions are answered, the professional README will include sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
+
+The Table of Contents will link directly to the corresponding sections within the README.
+
+Selecting the license used for the user's app will produce a badge for the license at the top of the README as well as a link for more information about the license in the License section.
+
+In the Questions section, entering the user's GitHub username will create a link directly to their GitHub profile.
 
 ## Table of Contents
 
@@ -15,45 +18,46 @@ Provide a short description explaining the what, why, and how of your project. U
 - [Usage][#usage]
 - [Credits](#credits)
 - [License](#license)
+- [Tests](#tests)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Users will need to open the index.js file in VS Code.
+Then they will need ensure that all of the dependencies are installed.
+
+To install dependencies:
+- Open the terminal in VS Code:
+
+
+- Enter "npm install"
+
+
+- The package-lock.json should appear in your folder:
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+With the index.js file open in VS Code, run "node index.js" in the terminal:
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
 
-![alt text](assets/images/screenshot.png)
+Follow the question prompts in the terminal to fill out a detailed README.md file.
+
+
+Link to video tutorial: 
 
 ## Credits
 
 Starter Code: https://git.bootcampcontent.com/UNC-Charlotte/UNCC-VIRT-FSF-FT-12-2023-U-LOLC
 
-Collaborators:
+Collaborators: Elliott, Jarod via zoom 1/11/2024
 
-Tutorials: Perez, Javier via YouTube ("How to make a README generator using node.js inquirer")
+Tutorials: Perez, Javier. "How to make a README generator using node.js inquirer". YouTube uploaded by Javier Perez, 13 Nov 2020, https://www.youtube.com/watch?v=2VUQABoFOqw&t=502s 
+
+"How to create a README Generator (TUTORIAL)". YouTube uploaded by DopeDev, 11 Aug 2022, https://www.youtube.com/watch?v=9YivEQFpmHQ&t=333s
 
 ## License
 
 None
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-
-
-
-[def]: #usage
+None
